@@ -1,80 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <link rel="stylesheet" href="src/css/header.css"
-        <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="src/css/style.css">
-        <script defer src = "src/javascript/head.js"></script>
-        <title>Landing Page</title>
-    </head>
-    <body>
-        <header>
-            <nav id="navbar">
-                <div class="logo">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                    <span>Equilíbrio Digital</span>
-                </div>
-                <ul id="nav_list">
-                    <li class="nav_item">
-                        <a href="#home">Início</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#problema">Problema</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#impacto">Impacto</a>
-                    </li>
-                     <li class="nav_item">
-                        <a href="#ajuda">Como ajudar</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#contato">Contato</a>
-                    </li>
-                </ul>
-                
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilíbrio Digital</title>
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#inicio" class="logo">
+                <i data-lucide="smartphone"></i>
+                Equilíbrio Digital
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="#inicio">
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a href="#o-problema">
+                        O Problema
+                    </a>
+                </li>
+                <li>
+                    <a href="#impacto">
+                        Impacto
+                    </a>
+                </li>
+                <li>
+                    <a href="#como-ajudar">
+                        Como ajudar
+                    </a>
+                </li>
+                <li>
+                    <a href="#contato">
+                        Contato
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <button class="btn-tema">
+                    <i data-lucide="moon"></i>
                 </button>
-
-                <button type="button" class="btn-default">
-                    Junte-se ao movimento
-                </button>
-
-                <button type="button" id="mobile_btn">
-                    <i class ="fa-solid fa-bars"></i>
-                </button>
-            </nav>
-            <div id="mobile_menu">
-                <ul id="mobile_nav_list">
-                    <li class="nav_item">
-                        <a href="#home">Início</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#problema">Problema</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#impacto">Impacto</a>
-                    </li>
-                     <li class="nav_item">
-                        <a href="#ajuda">Como ajudar</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#contato">Contato</a>
-                    </li>
-                </ul>
-                <button type="button" class="btn-default">
-                    Junte-se ao movimento
-                </button>
+                <a href="#contato" class="btn-cta">
+                Junte-se ao movimento
+                </a>
             </div>
+        </nav>
+    </header>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-titulo">Você controla a tecnologia.</h1>
+            <h1 class="hero-titulo-verde">Ou ela te controla?</h1>
+            <p class="hero-subtitulo">Um movimento que conscientiza sobre o uso saudável da tecnologia, redes
+            sociais e tempo de tela. Pequenas mudanças que transformam vidas.</p>
+        </div>
+        <div class="hero-botoes">
+            <a href="#o-problema" class="btn-primario">Saiba Mais</a>
+            <a href="#contato" class="btn-secundario">Assine o Manifesto</a>
+        </div>
+        <div class="hero-scroll">
+            <p>Role para descobrir</p>
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+    <section id="o-problema" class="numeros">
+        <div class="numeros-header">
+            <h2>O que os números falam?</h2>
+            <p>Dados concretos sobre o uso excessivo de tecnologia.</p>
+        </div>
+        <div class="numeros-grid">
+            <div class="numero-card">
+                <i data-lucide="smartphone"></i>
+                <span class="numero-valor">7h/dia</span>
+                <p>Média de tempo em telas.</p>
+            </div>
+            <div class="numero-card">
+                <i data-lucide="frown"></i>
+                <span class="numero-valor">70%</span>
+                <p>Porcentagem dos jovens que relatam ansiedade liagada às redes.</p>
+            </div>
+            <div class="numero-card">
+                <i data-lucide="bell"></i>
+                <span class="numero-valor">96x/dia</span>
+                <p>Quantidade de vezes que checamos o celular em média.</p>
+            </div>
+            <div class="numero-card">
+                <i data-lucide="moon"></i>
+                <span class="numero-valor">40%</span>
+                <p>Telas antes de dormir reduzem a qualidade do sono em até 40%.</p>
+            </div>
+        </div>
+    </section>
+    <section id="impacto" class="impacto">
+        <div class="impacto-header">
+            <h2>Nosso impacto</h2>
+            <p>Transformando vidas através de três pilares fundamentais.</p>
+        </div>
+        <div class="impacto-tabs">
+            <button class="tab-ativo" onclick="mostrarTab('educacao')">
+                <i data-lucide="book-open"></i>
+                Educação Digital
+            </button>
+            <button class="tab" onclick="mostrarTab('detox')">
+                <i data-lucide="heart"></i>
+                Detox das Redes
+            </button>
+            <button class="tab" onclick="mostrarTab('saude')">
+                <i data-lucide="brain"></i>
+                Saúde Mental
+            </button>
+        </div>
+        <div class="tab-conteudo-ativo" id="tab-educacao">
+            <div class="tab-info">
+                <div class="tab-icone">
+                    <i data-lucide="books"></i>
+                    <h3>Educação Digital</h3>
+                    <p>Capacitando pessoas para um uso consciente.</p>
+                    <ul>
+                        <li><i data-lucide="check"></i>Workshops sobre uso saudável de tecnologia.</li>
+                        <li><i data-lucide="check"></i>Materiais educativos para escolas e familiares.</li>
+                        <li><i data-lucide="check"></i>Palestras sobre cidadania digital.</li>
+                        <li><i data-lucide="check"></i>Programas de alfabetização digital.</li>
+                    </ul>
+                </div>
+                <div class="tab-imagem">
+                    <img src="src/images/educacao.png" alt="Educação Digital">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </header>
-        <main></main>
-        <footer></footer>
-        <script src="src/javascript/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    </body>
+    <script src="src/javascript/script.js"></script>
+    <script src="src/javascript/head.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
 </html>

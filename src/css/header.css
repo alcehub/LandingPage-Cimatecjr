@@ -1,33 +1,68 @@
-header {
-    width: 100%;
-    padding: 28px 8%;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-#navbar{
-    width: 100%;
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 48px;
+    height: 72px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.685);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
-
 .logo {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.logo i {
-    color: #22C55E;
-    font-size: 30px;
-}
-
-#nav_list {
     display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    white-space: nowrap;
+}
+.logo svg {
+    color: #22C55E;
+    width: 30px;
+    height: 30px;
+    stroke-width: 2.5;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
     list-style: none;
-    gap: 40px;
 }
 
-.nav_item a {
+.nav-links a {
     text-decoration: none;
-    color: #111111;
-    font-weight: 60500;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+.btn-cta {
+    background-color: #22C55E;
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 22px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+.nav-links a:hover {
+    color: #22C55E;
+    transform: translateY(-2px);
+    transition: color 0.25s ease, transform 0.25s ease;
 }
