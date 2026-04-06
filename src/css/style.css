@@ -1,5 +1,10 @@
 .hero {
-    min-height: 100vh;
+    min-height: 100svh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 48px;
     background: radial-gradient(ellipse at 70% 50%, #ffffff 0%, #dcfce7 45%, #86efac 100%);
 }
 .hero-content {
