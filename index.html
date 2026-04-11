@@ -6,7 +6,9 @@
     <title>Equilíbrio Digital</title>
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <header>
@@ -16,48 +18,35 @@
                 Equilíbrio Digital
             </a>
             <ul class="nav-links">
-                <li>
-                    <a href="#inicio">
-                        Início
-                    </a>
-                </li>
-                <li>
-                    <a href="#o-problema">
-                        O Problema
-                    </a>
-                </li>
-                <li>
-                    <a href="#impacto">
-                        Impacto
-                    </a>
-                </li>
-                <li>
-                    <a href="#como-ajudar">
-                        Como ajudar
-                    </a>
-                </li>
-                <li>
-                    <a href="#contato">
-                        Contato
-                    </a>
-                </li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#o-problema">O Problema</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+                <li><a href="#desafios">Desafios</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
+            <button class="nav-hamburguer" id="navHamburguer">
+                <i data-lucide="menu"></i>
+            </button>
+            <button class="btn-tema">
+                <i data-lucide="moon"></i>
+            </button>
             <div class="nav-right">
-                <button class="btn-tema">
-                    <i data-lucide="moon"></i>
-                </button>
-                <a href="#contato" class="btn-cta">
-                Junte-se ao movimento
-                </a>
+                <a href="#contato" class="btn-cta">Junte-se ao movimento</a>
             </div>
         </nav>
     </header>
+
+    <div class="contador-flutuante" id="contadorFlutuante">
+        <i data-lucide="zap"></i>
+        <strong id="totalPontos">0</strong>
+        <span> pts</span>
+    </div>
+
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1 class="hero-titulo">Você controla a tecnologia.</h1>
             <h1 class="hero-titulo-verde">Ou ela te controla?</h1>
-            <p class="hero-subtitulo">Um movimento que conscientiza sobre o uso saudável da tecnologia, redes
-            sociais e tempo de tela. Pequenas mudanças que transformam vidas.</p>
+            <p class="hero-subtitulo">Um movimento que conscientiza sobre o uso saudável da tecnologia, redes sociais e tempo de tela. Pequenas mudanças que transformam vidas.</p>
         </div>
         <div class="hero-botoes">
             <a href="#o-problema" class="btn-primario">Saiba Mais</a>
@@ -68,6 +57,7 @@
             <i data-lucide="chevron-down"></i>
         </div>
     </section>
+
     <section id="o-problema" class="numeros">
         <div class="numeros-header">
             <h2>O que os números falam?</h2>
@@ -82,7 +72,7 @@
             <div class="numero-card">
                 <i data-lucide="frown"></i>
                 <span class="numero-valor">70%</span>
-                <p>Porcentagem dos jovens que relatam ansiedade liagada às redes.</p>
+                <p>Porcentagem dos jovens que relatam ansiedade ligada às redes.</p>
             </div>
             <div class="numero-card">
                 <i data-lucide="bell"></i>
@@ -96,6 +86,7 @@
             </div>
         </div>
     </section>
+
     <section id="impacto" class="impacto">
         <div class="impacto-header">
             <h2>Nosso impacto</h2>
@@ -117,23 +108,200 @@
         </div>
         <div class="tab-conteudo-ativo" id="tab-educacao">
             <div class="tab-info">
-                <div class="tab-icone">
-                    <i data-lucide="books"></i>
-                    <h3>Educação Digital</h3>
-                    <p>Capacitando pessoas para um uso consciente.</p>
-                    <ul>
-                        <li><i data-lucide="check"></i>Workshops sobre uso saudável de tecnologia.</li>
-                        <li><i data-lucide="check"></i>Materiais educativos para escolas e familiares.</li>
-                        <li><i data-lucide="check"></i>Palestras sobre cidadania digital.</li>
-                        <li><i data-lucide="check"></i>Programas de alfabetização digital.</li>
-                    </ul>
+                <div class="tab-icone"><i data-lucide="book-open"></i></div>
+                <h3>Educação Digital</h3>
+                <p>Capacitando pessoas para um uso consciente.</p>
+                <ul>
+                    <li><i data-lucide="check"></i>Workshops sobre uso saudável de tecnologia.</li>
+                    <li><i data-lucide="check"></i>Materiais educativos para escolas e familiares.</li>
+                    <li><i data-lucide="check"></i>Palestras sobre cidadania digital.</li>
+                    <li><i data-lucide="check"></i>Programas de alfabetização digital.</li>
+                </ul>
+            </div>
+            <div class="tab-imagem">
+                <img src="src/images/educacao.png" alt="Ilustração de educação digital.">
+            </div>
+        </div>
+        <div class="tab-conteudo" id="tab-detox">
+            <div class="tab-info">
+                <div class="tab-icone"><i data-lucide="heart"></i></div>
+                <h3>Detox das Redes</h3>
+                <p>Reconectando com o mundo real.</p>
+                <ul>
+                    <li><i data-lucide="check"></i>Desafios de desconexão progressiva.</li>
+                    <li><i data-lucide="check"></i>Guias para uso consciente das redes sociais.</li>
+                    <li><i data-lucide="check"></i>Comunidade de apoio ao detox digital.</li>
+                    <li><i data-lucide="check"></i>Ferramentas de monitoramento de tempo de tela.</li>
+                </ul>
+            </div>
+            <div class="tab-imagem">
+                <img src="src/images/detox.png" alt="Ilustração de detox digital.">
+            </div>
+        </div>
+        <div class="tab-conteudo" id="tab-saude">
+            <div class="tab-info">
+                <div class="tab-icone"><i data-lucide="brain"></i></div>
+                <h3>Saúde Mental</h3>
+                <p>Cuidando do bem-estar emocional.</p>
+                <ul>
+                    <li><i data-lucide="check"></i>Recursos sobre ansiedade e uso de tecnologia.</li>
+                    <li><i data-lucide="check"></i>Técnicas de mindfulness e presença digital.</li>
+                    <li><i data-lucide="check"></i>Suporte para jovens com dependência digital.</li>
+                    <li><i data-lucide="check"></i>Parceria com profissionais de saúde mental.</li>
+                </ul>
+            </div>
+            <div class="tab-imagem">
+                <img src="src/images/saude.png" alt="Ilustração de saúde mental.">
+            </div>
+        </div>
+    </section>
+
+    <section id="desafios" class="desafios">
+        <div class="desafios-header">
+            <span class="badge-desafios">
+                <i data-lucide="flame"></i>
+                0 dias de sequência
+            </span>
+            <h2>Desafios Diários</h2>
+            <p>Aceite desafios e ganhe pontos enquanto desenvolve hábitos saudáveis.</p>
+        </div>
+        <div class="desafios-grid">
+            <div class="desafio-card">
+                <div class="desafio-topo">
+                    <div class="desafio-icone"><i data-lucide="utensils"></i></div>
+                    <span class="desafio-badge facil">Fácil</span>
                 </div>
-                <div class="tab-imagem">
-                    <img src="src/images/educacao.png" alt="Educação Digital">
+                <h3>Jantar sem celular</h3>
+                <p>Faça todas as refeições de hoje sem olhar o celular.</p>
+                <div class="desafio-rodape">
+                    <span class="desafio-pts">+20 pts</span>
+                    <button class="btn-desafio" onclick="aceitarDesafio(this, 20)">Aceitar desafio</button>
+                </div>
+            </div>
+            <div class="desafio-card">
+                <div class="desafio-topo">
+                    <div class="desafio-icone"><i data-lucide="timer"></i></div>
+                    <span class="desafio-badge medio">Médio</span>
+                </div>
+                <h3>Modo foco</h3>
+                <p>Use o modo foco por 2 horas consecutivas.</p>
+                <div class="desafio-rodape">
+                    <span class="desafio-pts">+30 pts</span>
+                    <button class="btn-desafio" onclick="aceitarDesafio(this, 30)">Aceitar desafio</button>
+                </div>
+            </div>
+            <div class="desafio-card">
+                <div class="desafio-topo">
+                    <div class="desafio-icone"><i data-lucide="sunrise"></i></div>
+                    <span class="desafio-badge medio">Médio</span>
+                </div>
+                <h3>Manhã digital</h3>
+                <p>Não use tela na primeira hora após acordar.</p>
+                <div class="desafio-rodape">
+                    <span class="desafio-pts">+35 pts</span>
+                    <button class="btn-desafio" onclick="aceitarDesafio(this, 35)">Aceitar desafio</button>
+                </div>
+            </div>
+            <div class="desafio-card">
+                <div class="desafio-topo">
+                    <div class="desafio-icone"><i data-lucide="bell-off"></i></div>
+                    <span class="desafio-badge medio">Médio</span>
+                </div>
+                <h3>Jejum de notificações</h3>
+                <p>Desative todas as notificações não essenciais por 24h.</p>
+                <div class="desafio-rodape">
+                    <span class="desafio-pts">+40 pts</span>
+                    <button class="btn-desafio" onclick="aceitarDesafio(this, 40)">Aceitar desafio</button>
+                </div>
+            </div>
+            <div class="desafio-card">
+                <div class="desafio-topo">
+                    <div class="desafio-icone"><i data-lucide="wifi-off"></i></div>
+                    <span class="desafio-badge dificil">Difícil</span>
+                </div>
+                <h3>Detox do fim de semana</h3>
+                <p>Reduza o uso de redes sociais em 50% durante o fim de semana.</p>
+                <div class="desafio-rodape">
+                    <span class="desafio-pts">+45 pts</span>
+                    <button class="btn-desafio" onclick="aceitarDesafio(this, 45)">Aceitar desafio</button>
+                </div>
+            </div>
+            <div class="desafio-card">
+                <div class="desafio-topo">
+                    <div class="desafio-icone"><i data-lucide="moon"></i></div>
+                    <span class="desafio-badge dificil">Difícil</span>
+                </div>
+                <h3>Rotina noturna</h3>
+                <p>Desligue telas 1 hora antes de dormir durante 7 dias.</p>
+                <div class="desafio-rodape">
+                    <span class="desafio-pts">+50 pts</span>
+                    <button class="btn-desafio" onclick="aceitarDesafio(this, 50)">Aceitar desafio</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="contato" class="assine">
+        <h2>Assine o Manifesto Digital</h2>
+        <p>Junte-se a diversas pessoas que resolveram retomar o controle da sua vida digital.</p>
+        <span class="assine-contador">1247 assinantes</span>
+        <div class="assine-form-box">
+            <div class="form-grupo">
+                <label><i data-lucide="user"></i> Nome completo*</label>
+                <input type="text" id="campoNome" placeholder="Digite seu nome completo">
+            </div>
+            <div class="form-grupo">
+                <label><i data-lucide="mail"></i> E-mail*</label>
+                <input type="email" id="campoEmail" placeholder="seu@email.com">
+            </div>
+            <div class="form-grupo">
+                <label><i data-lucide="map-pin"></i> Cidade*</label>
+                <input type="text" id="campoCidade" placeholder="Sua cidade">
+            </div>
+            <div class="form-grupo">
+                <label><i data-lucide="message-square"></i> Mensagem (Opcional)</label>
+                <textarea id="campoMensagem" placeholder="Compartilhe sua motivação para se juntar ao movimento"></textarea>
+            </div>
+            <button class="btn-assinar" onclick="assinarManifesto()">
+                <i data-lucide="pen-line"></i> Assine o manifesto
+            </button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-conteudo">
+            <div class="footer-logo-area">
+                <a href="#inicio" class="logo">
+                    <i data-lucide="smartphone"></i>
+                    Equilíbrio Digital
+                </a>
+                <p>Transformando vidas através do uso consciente da tecnologia. Pequenas mudanças, grande impacto.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#o-problema">O Problema</a></li>
+                    <li><a href="#impacto">Impacto</a></li>
+                    <li><a href="#desafios">Desafios</a></li>
+                    <li><a href="#contato">Assine</a></li>
+                </ul>
+            </div>
+            <div class="footer-redes">
+                <h4>Redes Sociais</h4>
+                <div class="redes-icones">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <p>Conecte-se conosco e compartilhe a mensagem de equilíbrio digital.</p>
+            </div>
+        </div>
+        <div class="footer-rodape">
+            <p>© 2026 Equilíbrio Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
     <script src="src/javascript/script.js"></script>
     <script src="src/javascript/head.js"></script>
