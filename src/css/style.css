@@ -898,6 +898,28 @@ body.dark {
     background: #0f172a;
 }
 
+body.dark nav {
+    background: rgba(15, 23, 42, 0.685);
+}
+
+body.dark .logo {
+    color: #ffffff;
+}
+
+body.dark .nav-links a {
+    color: #ffffff;
+}
+
+body.dark .nav-links {
+    background: rgba(15, 23, 42, 0.98);
+}
+
+
+body.dark .nav-hamburguer {
+    color: #ffffff;
+}
+
+
 body.dark .hero {
     background: radial-gradient(ellipse at 70% 50%, #0f172a 0%, #052e16 45%, #14532d 100%);
 }
