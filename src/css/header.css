@@ -49,6 +49,7 @@ nav {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 500;
+    background: transparent;
 }
 .btn-cta {
     background-color: #22C55E;
@@ -87,3 +88,4 @@ body.dark .btn-tema svg {
     color: #ffffff;
     stroke: #ffffff;
 }
+
