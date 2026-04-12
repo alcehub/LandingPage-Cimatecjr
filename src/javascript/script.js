@@ -1,6 +1,4 @@
-// ===========================
-// TABS - SEÇÃO IMPACTO
-// ===========================
+
 function mostrarTab(nome) {
     document.querySelectorAll('.tab-conteudo, .tab-conteudo-ativo').forEach(el => {
         el.className = 'tab-conteudo';
@@ -14,9 +12,7 @@ function mostrarTab(nome) {
     event.currentTarget.className = 'tab-ativo';
 }
 
-// ===========================
-// DESAFIOS
-// ===========================
+
 let totalPontos = 0;
 let desafiosConcluidos = 0;
 const totalDesafios = 6;
@@ -54,9 +50,7 @@ function lancarConfetes() {
     alert('🎉 Parabéns! Você completou todos os desafios do Equilíbrio Digital!');
 }
 
-// ===========================
-// FORMULÁRIO
-// ===========================
+
 function assinarManifesto() {
     const nome = document.getElementById('campoNome').value;
     const email = document.getElementById('campoEmail').value;
@@ -83,9 +77,7 @@ function assinarManifesto() {
     alert('🎉 Obrigado, ' + nome + '! Você assinou o Manifesto Digital!');
 }
 
-// ===========================
-// MENU HAMBURGUER
-// ===========================
+
 const hamburguer = document.getElementById('navHamburguer');
 const navLinks = document.querySelector('.nav-links');
 
@@ -99,9 +91,7 @@ document.querySelectorAll('.nav-links a').forEach(function(link) {
     });
 });
 
-// ===========================
-// DARK MODE
-// ===========================
+
 document.addEventListener('DOMContentLoaded', function() {
     const btnTema = document.querySelector('.btn-tema');
 
