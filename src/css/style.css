@@ -910,6 +910,11 @@ body.dark .nav-links a {
     color: #ffffff;
 }
 
+body.dark .nav-links {
+    background: rgba(15, 23, 42, 0.98);
+}
+
+
 body.dark .nav-hamburguer {
     color: #ffffff;
 }
@@ -1023,9 +1028,14 @@ body.dark .form-grupo label {
 
 body.dark .form-grupo input,
 body.dark .form-grupo textarea {
-    background: #0f172a;
+    background: #1e293b;
     color: #ffffff;
     border-color: #22C55E;
+}
+
+body.dark .form-grupo input::placeholder,
+body.dark .form-grupo textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 body.dark .footer {
